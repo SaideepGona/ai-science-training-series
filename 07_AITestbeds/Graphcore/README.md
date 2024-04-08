@@ -83,7 +83,7 @@ Run MNIST example by changing values of the input parameters like batch-size, le
 30 Epochs: Accuracy on test set: 9.58%
 40 Epochs: Accuracy on test set: 10.28%
 
-It seems like it is very easy to overfit with increased training. In particular 
+It seems like it is very easy to overfit with increased training. In particular, there is a steep dropoff between 20 and 30 epochs. This is likely due to the relative simplicity of the MNIST dataset relative to BERT.
 
 ## Additional Examples (Optional)
 
