@@ -78,6 +78,13 @@ e.g. `srun --ipus=1 python mnist_poptorch.py`
 
 Run MNIST example by changing values of the input parameters like batch-size, learning rate and number of epochs trained and observe and report the performance implications. 
 
+10 Epochs: Accuracy on test set: 97.67%
+20 Epochs: Accuracy on test set: 80.49%
+30 Epochs: Accuracy on test set: 9.58%
+40 Epochs: Accuracy on test set: 10.28%
+
+It seems like it is very easy to overfit with increased training. In particular 
+
 ## Additional Examples (Optional)
 
 * [GPT2](./gpt2.md)
