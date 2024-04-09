@@ -70,6 +70,38 @@ See `csctl -h` for more options.
 
 Run BERT example with different batch sizes like 512, 2048 and observe the performance difference.  
 
+Batch size 512:
+
+Beginning appliance run
+| Train Device=CSX, Step=100, Loss=9.39062, Rate=2997.12 samples/sec, GlobalRate=2997.12 samples/sec
+| Train Device=CSX, Step=200, Loss=8.70312, Rate=2952.14 samples/sec, GlobalRate=2959.16 samples/sec
+| Train Device=CSX, Step=300, Loss=7.79688, Rate=2937.27 samples/sec, GlobalRate=2948.48 samples/sec
+| Train Device=CSX, Step=400, Loss=7.39062, Rate=2925.75 samples/sec, GlobalRate=2940.82 samples/sec
+| Train Device=CSX, Step=500, Loss=7.80469, Rate=2926.62 samples/sec, GlobalRate=2938.08 samples/sec
+| Train Device=CSX, Step=600, Loss=7.53125, Rate=2911.71 samples/sec, GlobalRate=2931.97 samples/sec
+| Train Device=CSX, Step=700, Loss=7.35156, Rate=2909.51 samples/sec, GlobalRate=2928.53 samples/sec
+| Train Device=CSX, Step=800, Loss=7.27344, Rate=2907.21 samples/sec, GlobalRate=2925.65 samples/sec
+| Train Device=CSX, Step=900, Loss=7.35938, Rate=2916.78 samples/sec, GlobalRate=2925.37 samples/sec
+| Train Device=CSX, Step=1000, Loss=7.12500, Rate=2905.80 samples/sec, GlobalRate=2922.66 samples/sec
+
+Batch size 2048:
+
+Beginning appliance run
+| Train Device=CSX, Step=100, Loss=9.48438, Rate=6781.68 samples/sec, GlobalRate=6781.69 samples/sec
+| Train Device=CSX, Step=200, Loss=8.48438, Rate=6765.25 samples/sec, GlobalRate=6767.96 samples/sec
+| Train Device=CSX, Step=300, Loss=7.77344, Rate=6695.69 samples/sec, GlobalRate=6727.95 samples/sec
+| Train Device=CSX, Step=400, Loss=7.64062, Rate=6710.88 samples/sec, GlobalRate=6726.21 samples/sec
+| Train Device=CSX, Step=500, Loss=7.37500, Rate=6730.82 samples/sec, GlobalRate=6729.78 samples/sec
+| Train Device=CSX, Step=600, Loss=7.42188, Rate=6749.89 samples/sec, GlobalRate=6735.23 samples/sec
+| Train Device=CSX, Step=700, Loss=7.25000, Rate=6754.49 samples/sec, GlobalRate=6738.41 samples/sec
+| Train Device=CSX, Step=800, Loss=7.12500, Rate=6739.56 samples/sec, GlobalRate=6737.31 samples/sec
+| Train Device=CSX, Step=900, Loss=7.25000, Rate=6744.52 samples/sec, GlobalRate=6738.48 samples/sec
+| Train Device=CSX, Step=1000, Loss=7.14844, Rate=6749.38 samples/sec, GlobalRate=6739.89 samples/sec
+
+
+It seems like increasing the batch size from 512 to 2048 doesn't have too much of an effect on the training loss, although the rate of learning increases nearly 3-fold. 
+
+
 ### Additional Examples (Optional)
 
 * [GPT-J](./gptj.md)
