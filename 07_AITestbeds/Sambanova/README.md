@@ -45,6 +45,15 @@ cp -r /opt/sambaflow/apps/ ~
 
 For BERT example, understand flags used in the script. Change values for flag `--ntasks` and measure its effect on performance. 
 
+ntasks: 16
+{'e2e_train_time': 452.12045431137085, 'training_sequences_per_second': 585608.1879844761, 'final_loss': 8.25298023223877, 'training_samples_per_second': 4575.0639686287195}
+
+ntasks: 8
+{'e2e_train_time': 458.7278108596802, 'training_sequences_per_second': 288586.645208861, 'final_loss': 8.308782577514648, 'training_samples_per_second': 2254.5831656942264}
+
+Dropping the number of tasks from 16 to 8 resulted in nearly half the training rate in terms of sequences/samples per second.
+
+
 <!---
 ## Additional Examples (Optional) 
 
